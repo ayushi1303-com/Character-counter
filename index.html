@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character count</title>
+    <style>
+        body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container{
+    background-color: rgb(102, 103, 105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* color: black; */
+    
+    
+}
+.box{
+    background-color: rgb(156, 150, 181);
+    text-align: center;
+    /* padding: 20px; */
+    border-radius: 20px;
+    padding: 60px 50px;
+    width: 500px;
+    border: 2px solid black;
+    align-items: center;
+    
+    /* flex-direction: center; */
+}
+
+textarea{
+    height: 300px;
+    width: 300px;
+border-radius: 5px;
+border: 5px solid black;
+flex-direction: center;
+}
+p{
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+    
+    <h2>Character Count</h2>
+    <textarea name="" id="inputtext" placeholder="Type Text...."></textarea>
+    <p>Character count : <span id="count">0</span></p>
+</div>
+</div>
+
+    <script>
+        let inputtext = document.getElementById('inputtext');
+        let count = document.getElementById('count');
+
+        inputtext.addEventListener("input" , () =>{
+            count.textContent = inputtext.value.length;
+        });
+    </script>
+    
+</body>
+</html>
